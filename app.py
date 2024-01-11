@@ -64,14 +64,48 @@ def lab1():
 </html>    
 '''
 
-@app.route('/lab1/oak')
+@app.route('/lab1/oak') 
 def oak():
     return '''
 <!doctype html>
 <html>
+    <head>
+    <link rel="stylesheet" href="''' + url_for('static', filename='main.css') + '''"
+    </head>
     <body>
         <h1>Дуб</h1>
-        <img src="''' + url_for('static', filename='oak.jpg') + '''">
+        <img src="''' + url_for('static', filename='oak.jpg') + '''" width=600px, height=500px>
     </body>
 </html>
 '''
+
+@app.route('/lab1/students')
+def students():
+    return '''
+<!doctype html>
+<html>
+    <body>
+        <header>
+            НГТУ, ФБ, Лабораторная работа № 1
+        </header>
+        
+        <h1>web-сервер на flask</h1>
+
+        <main>
+            <br>
+            <div>
+                Клопенкова Виктория Владимировна
+            </div>
+            <br>
+
+            <h1>Логотип</h1>
+            <img src="''' + url_for('static', filename='лого.jpg') + '''" width=450px, height=300px>
+        </main>
+
+        <footer>
+            &copy; Клопенкова Виктория, ФБИ-11, 3 курс, 2023
+        </footer>    
+    </body>
+</html>    
+'''
+
